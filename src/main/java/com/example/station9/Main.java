@@ -15,6 +15,28 @@ public class Main {
 
     public static void test(int[] itemPrices) {
         // ここから
+        int sum = 0;
+        for (int i = 0; i < itemPrices.length; i = i + 1){
+            sum = sum + itemPrices[i];
+        }
+        
+        int total = 0;
+
+        for (int i = 0; i < itemPrices.length; i = i + 1){
+            if (itemPrices[i] >= 2000){
+                total = total + itemPrices[i];
+            }
+        }
+
+        if (sum <= 5000){
+            System.out.println("A");
+        } else if (total >= 4000 && sum >= 5800){
+            System.out.println("C");
+        } else if (sum >= 5555){
+            System.out.println("B");
+        } else {
+            System.out.println("なし");
+        }
         // ここまで
     }
 }
